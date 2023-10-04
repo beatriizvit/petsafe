@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cadastro - PetSafe</title>
+    
+        <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Ícones Bootstrap. Para consultar os ícones: https://icons.getbootstrap.com -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+        rel="stylesheet">
+
+        <!-- favicon -->
+        <link rel="icon" href="images/logo.png" type="image/png" />
+    
+        <link rel="stylesheet" href="css/estilo.css">
+    </head>
+
+    <body>
+        <!--cabeçalho da página-->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid m-3">
+                <!-- Nome da empresa -->
+                <a class="navbar-brand text-light">PetSafe</a>
+                <!-- itens do menu -->
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="index.html">
+                                <i class="bi bi-person"></i> Cadastro
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="listagem.html">
+                                <i class="bi bi-clipboard-data"></i> Dados
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid mt-5">
+            <div class="row">
+                <div>
+                    <!-- Coluna do form -->
+                    <div>
+                        <h1 class="text-light">
+                            <img
+                                src="images/logo.png"
+                                class="img-fluid"
+                                width="100"
+                            />
+                            Cadastro de Pets
+                        </h1>
+                    </div>
+                    <br> <!-- quebra de linha -->
+        
+                    <form> <!--início do formulário-->
+                        
+                        <div class="text-center"> 
+                            <label for="nome">Nome do seu pet</label>
+                                <input type="text" id="nome" name="nome"
+                                placeholder="Nome do pet" autofocus title="Informe o nome do seu pet"/>
+                        </div>
+<br>                        
+                         <div class="text-center">  <!-- campo para selecionar o sexo -->
+                            <label for="sexo">Sexo</label>
+                            <input type="radio" id="macho" name="sexo" value="Macho" class="sexo1" title="Selecione"> Macho
+                            <input type="radio" id="femea" name="sexo" value="Fêmea" class="sexo"title="Selecione"> Fêmea
+                         </div>   
+<br>
+                        <div class="text-center"> <!-- campo para selecionar a raça -->
+                            <label for="raca">Raça</label>
+                            <select title="Selecione a raça do seu pet" class="form-control" id="raca">
+                                <option value="" disabled selected>Selecione...</option>
+                                <option value="Shih Tzu">Shih Tzu</option>
+                                <option value="Pug">Pug</option>
+                                <option value="Golden Retriever">Golden Retriever</option>
+                                <option value="Rottweiler">Rottweiler</option>
+                                <option value="Yorkshire Terrier">Yorkshire Terrier</option>
+                                <option value="Outro">Outro</option>
+                        </select>
+                        </div>
+<br>
+                        <div class="text-center"> <!-- campo para selecionar a data de nascimento -->
+                            <label for="nascimento">Nascimento do seu pet</label>
+                                <input type="date" id="nascimento" name="nascimento" title="Selecione a data de nascimento">
+                        </div>
+<br>
+                        <div class="text-center"> <!-- campo para colocar telefone para contato -->
+                            <label for="telefone" class="form-label">Telefone</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="telefone"
+                                placeholder="(xx) xxxxx-xxxx"
+                                maxlength="11"
+                                title="Informe o número de telefone com DDD"
+                            />
+                        </div>
+<br>
+                        <div class="text-center"> <!-- campo para selecionar caso queira atualizações da empresa -->
+                             <label for="atualizacoes"> </label>  
+                             Deseja receber atualizações da PetSafe?
+                             <input type="checkbox" id="sim" name="atualizacoes" class="atualizacoes" value="Sim"> 
+                        
+                        </div>
+
+
+                            <br>    
+                        <div class="text-center"> <!-- botões salvar e limpar -->
+                            <input
+                                type="submit"
+                                class="btn-dark btn"
+                                id="salvar"
+                                onclick="salvarCadastro()"
+                                value="Salvar"
+                            />
+                            <input
+                                type="reset"
+                                class="btn-dark btn"
+                                id="limpar"
+                                value="Limpar"
+                            />
+                        </div>
+                    </form>
+                </div>
+
+        <!-- Rodapé -->
+        <br>
+        <footer class="footer mt-auto p-3">
+            <div class="container text-center">
+                <span class="text-light">Fatec Itu &copy; <span id="ano"></span> - Todos os direitos
+                    reservados
+                    <br> <!--quebra de linha-->
+                    <br> Criado por Ana Beatriz, Beatriz e Júlia Vechiati
+                    <br> 2023
+                </span>
+            </div>
+        </footer>
+
+        <script src="js/dados.js"></script>
+
+    </body>
+
+    
+</html>
